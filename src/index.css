@@ -2,3 +2,90 @@ body {
 	margin: 0;
 	box-sizing: border-box;
 }
+
+.App {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	width: 30rem;
+	height: 50rem;
+}
+
+.Ipod {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: #e5e4e2;
+	border-radius: 55px;
+	box-shadow: inset 1px 1px 10px black;
+}
+
+.Display {
+	width: 90%;
+	height: 45%;
+	margin-top: 2rem;
+	border: 3px solid black;
+	border-radius: 20px;
+	background-color: whitesmoke;
+}
+
+.CircularScrollbar {
+	position: relative;
+	width: 20rem;
+	height: 20rem;
+	margin-bottom: 2rem;
+	background-color: whitesmoke;
+	border-radius: 50%;
+}
+
+#menu-button {
+	position: absolute;
+	left: 38%;
+	top: 12%;
+	font-size: 24px;
+	font-weight: bold;
+	color: grey;
+	cursor: default;
+}
+
+i {
+	color: grey;
+	font-size: 48px;
+}
+
+#backward-button {
+	position: absolute;
+	top: 42%;
+	left: 8%;
+}
+
+#forward-button {
+	position: absolute;
+	top: 42%;
+	right: 8%;
+}
+
+#play-pause-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.5rem;
+	position: absolute;
+	left: 35%;
+	bottom: 8%;
+}
+
+#enter-button {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	width: 8rem;
+	height: 8rem;
+	background-color: #e5e4e2;
+	border-radius: 50%;
+}
