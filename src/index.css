@@ -1,5 +1,6 @@
-body {
+* {
 	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
@@ -30,7 +31,51 @@ body {
 	margin-top: 2rem;
 	border: 3px solid black;
 	border-radius: 20px;
+	background-image: url('../public/2-nature-wallpaper-grass.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	background-color: whitesmoke;
+}
+
+#ipod-main-menu {
+	width: 50%;
+	height: 100%;
+	background: white;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+#ipod-main-menu-title {
+	font-size: 36px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 1rem;
+	cursor: default;
+}
+
+#menu-items-list {
+	list-style: none;
+	padding: 1rem 1rem;
+}
+
+.menu-item-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	cursor: default;
+}
+
+.active, .menu-item-wrapper:hover {
+	background-color: blue;
+	color: white;
+	border-radius: 36px;
+}
+
+.menu-item-name {
+	font-size: 20px;
+	font-weight: bold;
 }
 
 .CircularScrollbar {
@@ -52,7 +97,7 @@ body {
 	cursor: default;
 }
 
-i {
+.nav-btn {
 	color: grey;
 	font-size: 48px;
 }
