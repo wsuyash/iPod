@@ -11,30 +11,49 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+
+// Using ZingTouch to handle circular scroll
 const containerElement = document.getElementById('circular-scroll');
 const activeRegion = ZingTouch.Region(containerElement);
 
-const elements = document.getElementsByClassName('nav-btn');
+// Current angle
+let angle = 0;
 
-for (let e of elements) {
-	activeRegion.bind(e, 'rotate', function(event) {
-		// console.log(event.draggable);
-		// console.log(event.detail.distanceFromLast);
+// Binding rotate event from ZingTouch to the CircularScrollbar
+activeRegion.bind(containerElement, 'rotate', function(event) {
+	angle += event.detail.distanceFromLast;
 
-		let angle = Math.abs(event.detail.distanceFromLast);
+	// Resetting the angle to 0 in order to prevent scrolling from being stuck
+	if(Math.abs(angle) > 75) {
+		angle = 0;
+	}
 
-		if(angle > 15 && angle < 30) {
-			document.getElementById('cover-flow').classList.remove('active');
-			document.getElementById('music').classList.add('active');
-		}
+	// Allocating the "active" class to the relevent menu item depending on the degree of rotation
+	if((Math.abs(angle) > 0 && Math.abs(angle) < 15)) {
+		document.getElementById('cover-flow').classList.add('active');
+		document.getElementById('music').classList.remove('active');
+		document.getElementById('games').classList.remove('active');
+		document.getElementById('settings').classList.remove('active');
+	}
 
-		if(angle > 30 && angle < 45) {
-			document.getElementById('music').classList.remove('active');
-			document.getElementById('games').classList.add('active');
-		}
-	});
-}
+	if(Math.abs(angle) > 15 && Math.abs(angle) < 30) {
+		document.getElementById('music').classList.add('active');
+		document.getElementById('cover-flow').classList.remove('active');
+		document.getElementById('games').classList.remove('active');
+		document.getElementById('settings').classList.remove('active');
+	}
 
-/* activeRegion.bind(elements, 'rotate', function(e) {
-	console.log(e.detail.distanceFromLast);
-}); */
+	if(Math.abs(angle) > 30 && Math.abs(angle) < 60) {
+		document.getElementById('games').classList.add('active');
+		document.getElementById('cover-flow').classList.remove('active');
+		document.getElementById('music').classList.remove('active');
+		document.getElementById('settings').classList.remove('active');
+	}
+
+	if(Math.abs(angle) > 60) {
+		document.getElementById('settings').classList.add('active');
+		document.getElementById('cover-flow').classList.remove('active');
+		document.getElementById('music').classList.remove('active');
+		document.getElementById('games').classList.remove('active');
+	}
+});
