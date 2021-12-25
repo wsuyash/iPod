@@ -23,10 +23,18 @@ function Display() {
 				</ul>
 			</div>
 
-			<div id="cover-flow-screen" className="hidden"></div>
-			<div id="music-screen" className="hidden"></div>
-			<div id="games-screen" className="hidden"></div>
-			<div id="settings-screen" className="hidden"></div>
+			<div id="cover-flow-screen" className="screens hidden">
+				<h1>Cover Flow</h1>
+			</div>
+			<div id="music-screen" className="screens hidden">
+				<h1>Music</h1>
+			</div>
+			<div id="games-screen" className="screens hidden">
+				<h1>Games</h1>
+			</div>
+			<div id="settings-screen" className="screens hidden">
+				<h1>Settings</h1>
+			</div>
 		</div>
 	);
 }

@@ -11,16 +11,22 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-
 // Using ZingTouch to handle circular scroll
 const containerElement = document.getElementById('circular-scroll');
 const activeRegion = ZingTouch.Region(containerElement);
 
-// Current angle
+// Setting the current scroll angle to 0
 let angle = 0;
 
 // Binding rotate event from ZingTouch to the CircularScrollbar
 activeRegion.bind(containerElement, 'rotate', function(event) {
+
+	// Disable scroll when not on main-menu screen
+	if (document.getElementById('ipod-main-menu').classList.contains('hidden')) {
+		return;
+	};
+
+	// Increasing angle by scroll degree
 	angle += event.detail.distanceFromLast;
 
 	// Resetting the angle to 0 in order to prevent scrolling from being stuck
@@ -56,4 +62,27 @@ activeRegion.bind(containerElement, 'rotate', function(event) {
 		document.getElementById('music').classList.remove('active');
 		document.getElementById('games').classList.remove('active');
 	}
+});
+
+// Clicking the "MENU" button to get to the main menu
+const menuButton = document.getElementById('menu-button');
+menuButton.addEventListener('click', function(e) {
+	// Displaying no other screens except the main menu
+	document.getElementById('cover-flow-screen').classList.add('hidden');
+	document.getElementById('music-screen').classList.add('hidden');
+	document.getElementById('games-screen').classList.add('hidden');
+	document.getElementById('settings-screen').classList.add('hidden');
+
+	// Displaying the main menu
+	document.getElementById('ipod-main-menu').classList.remove('hidden');
+});
+
+const enterButton = document.getElementById('enter-button');
+enterButton.addEventListener('click', function(event){
+	const activeClassElement = document.getElementsByClassName('active')[0].id;
+	const idToDisplay = activeClassElement + "-screen";
+
+	document.getElementById('ipod-main-menu').classList.add('hidden');;
+
+	document.getElementById(idToDisplay).classList.remove('hidden');
 });

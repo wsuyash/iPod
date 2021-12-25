@@ -2,8 +2,11 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	/* disable text-selection */
+	user-select: none; 
 }
 
+/* Main container */
 .App {
 	position: absolute;
     top: 50%;
@@ -13,6 +16,7 @@
 	height: 50rem;
 }
 
+/* Ipod Component */
 .Ipod {
 	display: flex;
 	flex-direction: column;
@@ -25,17 +29,18 @@
 	box-shadow: inset 1px 1px 10px black;
 }
 
+/* Display Component */
 .Display {
-	width: 90%;
+	width: 95%;
 	height: 45%;
 	margin-top: 2rem;
 	border: 3px solid black;
-	border-radius: 20px;
 	background-image: url('../public/2-nature-wallpaper-grass.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-color: whitesmoke;
+	border-radius: 20px;
 }
 
 #ipod-main-menu {
@@ -70,7 +75,7 @@
 .active {
 	background-color: blue;
 	color: white;
-	border-radius: 36px;
+	border-radius: 12px;
 }
 
 .menu-item-name {
@@ -78,6 +83,21 @@
 	font-weight: bold;
 }
 
+/* Different Screens */
+.screens {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	font-size: 24px;
+	font-weight: bold;
+	color: black;
+	background-color: white;
+	border-radius: 20px;
+}
+
+/* CircularScrollbar Component */
 .CircularScrollbar {
 	position: relative;
 	width: 20rem;
@@ -133,4 +153,8 @@
 	height: 8rem;
 	background-color: #e5e4e2;
 	border-radius: 50%;
+}
+
+.hidden {
+	display: none;
 }

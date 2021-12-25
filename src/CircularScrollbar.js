@@ -8,7 +8,7 @@ function CircularScrollbar() {
 				<i className="fa-solid fa-pause nav-btn" id='pause-button'></i>
 			</div>
 			<i className="fa-solid fa-forward-fast nav-btn" id='forward-button'></i>
-			<div className="nav-btn" id='enter-button'></div>
+			<div id='enter-button'></div>
 		</div>
 	);
 }
