@@ -1,7 +1,7 @@
 function CircularScrollbar() {
 	return (
 		<div className='CircularScrollbar' id="circular-scroll">
-			<span id='menu-button'>MENU</span>
+			<span id='menu-button' className="nav-btn">MENU</span>
 			<i className="fa-solid fa-backward-fast nav-btn" id='backward-button'></i>
 			<div id='play-pause-wrapper'>
 				<i className="fa-solid fa-play nav-btn" id='play-button'></i>

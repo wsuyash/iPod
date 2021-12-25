@@ -67,7 +67,8 @@
 	cursor: default;
 }
 
-.active, .menu-item-wrapper:hover {
+/* .active, .menu-item-wrapper:hover { */
+.active {
 	background-color: blue;
 	color: white;
 	border-radius: 36px;
