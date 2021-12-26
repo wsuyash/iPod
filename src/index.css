@@ -5,6 +5,14 @@
 	box-sizing: border-box;
 	/* disable text-selection */
 	user-select: none; 
+	/* Hide Scrollbar but keep fuctionality */
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
 }
 
 /* Main container */
