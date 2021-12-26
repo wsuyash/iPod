@@ -1,3 +1,4 @@
+/* Common styles for all elements */
 * {
 	margin: 0;
 	padding: 0;
@@ -35,7 +36,7 @@
 	height: 45%;
 	margin-top: 2rem;
 	border: 3px solid black;
-	background-image: url('../public/2-nature-wallpaper-grass.jpg');
+	background-image: url('../public/wallpaper.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -43,6 +44,7 @@
 	border-radius: 20px;
 }
 
+/* Main menu in the Display */
 #ipod-main-menu {
 	width: 50%;
 	height: 100%;
@@ -51,6 +53,7 @@
 	border-bottom-left-radius: 20px;
 }
 
+/* Main menu title */
 #ipod-main-menu-title {
 	font-size: 36px;
 	font-weight: bold;
@@ -59,6 +62,7 @@
 	cursor: default;
 }
 
+/* Main menu list */
 #menu-items-list {
 	list-style: none;
 	padding: 1rem 1rem;
@@ -72,6 +76,7 @@
 	cursor: default;
 }
 
+/* Selected option in the menu has this class */
 .active {
 	background-color: blue;
 	color: white;
@@ -86,6 +91,7 @@
 /* Different Screens */
 .screens {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	width: 100%;
@@ -95,6 +101,34 @@
 	color: black;
 	background-color: white;
 	border-radius: 20px;
+}
+
+/* Screen logo container */
+.screen-logo {
+	width: 10rem;
+	height: 10rem;
+}
+
+/* Logos for different screens */
+#music-logo {
+	background-image: url("/public/music-logo.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#games-logo {
+	background-image: url("/public/games-logo.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#settings-logo {
+	background-image: url("/public/settings-logo.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 /* CircularScrollbar Component */
@@ -107,6 +141,7 @@
 	border-radius: 50%;
 }
 
+/* Menu button */
 #menu-button {
 	position: absolute;
 	left: 38%;
@@ -117,6 +152,7 @@
 	cursor: default;
 }
 
+/* All navigation buttons/icons */
 .nav-btn {
 	color: grey;
 	font-size: 48px;
@@ -144,6 +180,7 @@
 	bottom: 8%;
 }
 
+/* Enter button/ circle in the center */
 #enter-button {
 	position: absolute;
     top: 50%;
@@ -155,6 +192,7 @@
 	border-radius: 50%;
 }
 
+/* hidden class to hide elements */
 .hidden {
 	display: none;
 }

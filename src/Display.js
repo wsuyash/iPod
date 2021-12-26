@@ -26,13 +26,19 @@ function Display() {
 			<div id="cover-flow-screen" className="screens hidden">
 				<h1>Cover Flow</h1>
 			</div>
+
 			<div id="music-screen" className="screens hidden">
+				<div className="screen-logo" id="music-logo"></div>
 				<h1>Music</h1>
 			</div>
+
 			<div id="games-screen" className="screens hidden">
+				<div className="screen-logo" id="games-logo"></div>
 				<h1>Games</h1>
 			</div>
+
 			<div id="settings-screen" className="screens hidden">
+				<div className="screen-logo" id="settings-logo"></div>
 				<h1>Settings</h1>
 			</div>
 		</div>
